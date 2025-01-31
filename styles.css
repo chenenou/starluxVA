@@ -9,8 +9,8 @@ body {
 
 /* 頂部導航欄 */
 header {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 15px;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px 50px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -19,6 +19,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* LOGO 與標題 */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 50px;
+  content: url('https://media.discordapp.net/attachments/1275411810635218964/1334934464949784586/unnaSmed.png?ex=679e561a&is=679d049a&hm=38f8b09100dcea3f5bff9ace2f504bae81336c0a47564f22ab3fc845c6430bab&=&format=webp&quality=lossless');
+  margin-right: 15px;
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  color: #f4c430;
+  margin: 0;
 }
 
 .navbar {
@@ -32,32 +51,36 @@ header {
   font-weight: 600;
   padding: 10px 20px;
   transition: 0.3s;
+  font-size: 1.1rem;
 }
 
 .navbar a:hover {
   color: #f4c430;
+  border-bottom: 2px solid #f4c430;
 }
 
 /* 首頁橫幅（Hero Section） */
 .hero {
   background: url('https://media.discordapp.net/attachments/1334588664864309248/1334860954600603729/image.png?ex=679e11a4&is=679cc024&hm=266a059266befc9f8aed93ef5515c09dabd273f2d0cede445a28e13049d35e61&=&format=webp&quality=lossless') no-repeat center center/cover;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding-left: 10%;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #f4c430;
+  text-align: left;
+  max-width: 600px;
 }
 
 .hero p {
   font-size: 1.5rem;
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
 }
 
 .cta-button {
@@ -69,6 +92,8 @@ header {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .cta-button:hover {
@@ -83,6 +108,7 @@ header {
 
 .content h2 {
   color: #f4c430;
+  font-size: 2rem;
 }
 
 /* 頁腳 */
@@ -90,4 +116,5 @@ footer {
   background: #222;
   padding: 20px;
   color: #bbb;
+  text-align: center;
 }
