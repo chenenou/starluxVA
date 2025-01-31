@@ -68,19 +68,22 @@ header {
   align-items: center;
   justify-content: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  padding: 0 10%;
+  padding: 0 5%;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #f4c430;
-  max-width: 800px;
+  max-width: 90%;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  max-width: 800px;
+  font-size: 1.3rem;
+  max-width: 80%;
+  line-height: 1.6;
 }
 
 .cta-button {
@@ -102,7 +105,7 @@ header {
 
 /* 主要內容區域 */
 .content {
-  padding: 50px 20px;
+  padding: 60px 5%;
   margin-top: 100vh;
 }
 
