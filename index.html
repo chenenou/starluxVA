@@ -30,6 +30,7 @@
       top: 0;
       left: 0;
       z-index: 1000;
+      transition: top 0.3s;
     }
 
     .logo-container {
@@ -44,7 +45,7 @@
 
     .navbar {
       display: flex;
-      list-style: none;
+      gap: 15px;
     }
 
     .navbar a {
@@ -103,7 +104,7 @@
 
     .content {
       padding: 50px 20px;
-      margin-top: 100vh;
+      margin-top: 50px;
     }
 
     .content h2 {
@@ -120,13 +121,14 @@
 </head>
 
 <body>
-  <header>
+  <header id="navbar">
     <div class="logo-container">
-      <img src="https://media.discordapp.net/attachments/1275411810635218964/1334934464949784586/unnaSmed.png" alt="STARLUX Airlines">
+      <img src="https://media.discordapp.net/attachments/1275411810635218964/1334934464949784586/unnaSmed.png" alt="STARLUX VA">
       <h1>星宇虛擬航空 STARLUX VA</h1>
     </div>
     <nav class="navbar">
-      <a href="#">首頁</a>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
       <a href="#services">尊榮體驗</a>
       <a href="#destinations">目的地</a>
       <a href="#membership">會員計畫</a>
@@ -136,7 +138,7 @@
 
   <section class="hero">
     <h1>探索星際，翱翔宇宙</h1>
-    <p>星宇虛擬航空提供快樂的學習環境，所有玩家皆可以享受溫暖的環境。</p>
+    <p>星宇虛擬航空提供極致奢華的飛行體驗，無論您前往何處，皆可感受尊榮與舒適。</p>
     <a href="https://discord.gg/ckUTDYV8Ec" class="cta-button">加入我們</a>
   </section>
 
@@ -152,6 +154,20 @@
   <footer>
     <p>&copy; 2025 星宇虛擬航空 STARLUX VA. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      let navbar = document.getElementById("navbar");
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        navbar.style.top = "-100px";
+      } else {
+        navbar.style.top = "0";
+      }
+      lastScrollTop = currentScroll;
+    });
+  </script>
 </body>
 
 </html>
