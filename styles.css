@@ -8,7 +8,7 @@ body {
 }
 
 /* 頂部導航欄 */
-#header {
+header {
   background: rgba(0, 0, 0, 0.9);
   padding: 15px;
   position: fixed;
@@ -19,10 +19,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-#header .logo img {
-  height: 50px;
 }
 
 .navbar {
@@ -42,37 +38,56 @@ body {
   color: #f4c430;
 }
 
-/* 主要內容區域 */
-main {
-  padding-top: 80px;
-  text-align: center;
-  min-height: 100vh;
+/* 首頁橫幅（Hero Section） */
+.hero {
+  background: url('https://www.starlux-airlines.com/assets/img/starlux-hero.jpg') no-repeat center center/cover;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-section {
-  width: 80%;
-  max-width: 1200px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5em;
+.hero h1 {
+  font-size: 3rem;
   color: #f4c430;
 }
 
-h2 {
-  font-size: 1.5em;
-  margin-top: 10px;
+.hero p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.cta-button {
+  background: #f4c430;
+  color: #111;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffdd57;
+}
+
+/* 主要內容區域 */
+.content {
+  padding: 50px 20px;
+  margin-top: 100vh;
+}
+
+.content h2 {
+  color: #f4c430;
 }
 
 /* 頁腳 */
 footer {
   background: #222;
-  text-align: center;
   padding: 20px;
   color: #bbb;
 }
