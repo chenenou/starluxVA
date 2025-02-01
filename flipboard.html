@@ -14,9 +14,12 @@
             background: #222;
             color: white;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px; /* ✅ 確保小螢幕時不會太貼邊 */
         }
         .flip-flap-board {
-            width: 1100px;
+            width: 90%; /* ✅ 原本是固定 1100px，現在改成響應式 */
+            max-width: 1100px; /* ✅ 讓大螢幕上不會超出範圍 */
             background: #111;
             padding: 30px;
             border-radius: 10px;
@@ -69,7 +72,8 @@
         }
         .flip {
             position: relative;
-            width: 200px;
+            width: 18%; /* ✅ 原本是固定 200px，現在改成相對比例 */
+            min-width: 100px; /* ✅ 加了最小寬度，確保手機上不會太小 */
             height: 70px;
             perspective: 1000px;
             text-align: center;
@@ -94,6 +98,7 @@
             font-size: 1rem;
             color: #bbb;
             margin-top: 20px;
+            text-align: center; /* ✅ 確保 footer 在小螢幕上對齊 */
         }
         #error-message {
             color: red;
