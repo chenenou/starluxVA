@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>星宇虛擬航空-STARLUX virtual aviation</title>
+  <title>星宇虛擬航空 STARLUX VA</title>
   <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1275411810635218964/1334934464949784586/unnaSmed.png?ex=679e561a&is=679d049a&hm=38f8b09100dcea3f5bff9ace2f504bae81336c0a47564f22ab3fc845c6430bab&">
   <meta name="description" content="星宇虛擬航空，帶您翱翔星空，享受極致奢華的飛行體驗。">
 
@@ -12,6 +12,33 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: #f4c430;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 999;
+      }
+      .navbar.active {
+        display: flex;
+      }
+    }
     body {
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #111;
@@ -158,9 +185,10 @@
 
 <body>
   <header id="navbar">
+    <button class="menu-toggle">☰</button>
     <div class="logo-container">
       <img src="https://media.discordapp.net/attachments/1275411810635218964/1334934464949784586/unnaSmed.png" alt="STARLUX VA">
-      <h1>星宇虛擬航空-STARLUX virtual aviation</h1>
+      <h1>星宇虛擬航空 STARLUX VA</h1>
     </div>
     <nav class="navbar">
       <a href="index.html">首頁</a>
@@ -213,6 +241,16 @@
         navbar.style.top = "0";
       }
       lastScrollTop = currentScroll;
+    });
+  </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navbar = document.querySelector('.navbar');
+
+      menuToggle.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+      });
     });
   </script>
 </body>
