@@ -32,7 +32,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: #ffcc00;
-            display: flex;
+            display: grid; /* ✅ 改為 Grid，適應不同螢幕 */
             justify-content: space-between;
             align-items: center;
             width: 100%;
@@ -72,7 +72,7 @@
         }
         .flip {
             position: relative;
-            width: 18%; /* ✅ 原本是固定 200px，現在改成相對比例 */
+            flex-grow: 1; /* ✅ 讓格子等比例調整 */
             min-width: 100px; /* ✅ 加了最小寬度，確保手機上不會太小 */
             height: 70px;
             perspective: 1000px;
@@ -104,6 +104,17 @@
             color: red;
             margin-top: 10px;
             font-size: 1.2rem;
+       }
+
+        @media (max-width: 600px) {
+            #flip-flap-header {
+                display: flex;
+                flex-direction: column; /* ✅ 確保小螢幕換行顯示 */
+                gap: 5px;
+            }
+            .flip {
+                width: 100%; /* ✅ 小螢幕時每格佔滿整行 */
+            }
         }
     </style>
 </head>
