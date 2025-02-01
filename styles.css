@@ -43,6 +43,7 @@ header {
 .navbar {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -107,6 +108,9 @@ header {
 .content {
   padding: 60px 5%;
   margin-top: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .content h2 {
@@ -120,4 +124,47 @@ footer {
   padding: 20px;
   color: #bbb;
   text-align: center;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-text, .map-info, .flight-info {
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+  .hero {
+    padding: 0 10%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
