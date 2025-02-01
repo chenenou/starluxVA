@@ -266,6 +266,7 @@ body {
     .login-button:hover {
       background: #ffdd57;
     }
+
     .flight-info {
       width: 100%;
       height: 400px; /* Adjust height as needed */
