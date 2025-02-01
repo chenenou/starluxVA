@@ -6,11 +6,21 @@ body {
   margin: 0;
   padding: 0;
 }
+.container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* 頂部導航欄 */
 header {
-  background: rgba(0, 0, 0, 0.95);
-  padding: 20px 50px;
+ background: rgba(0, 0, 0, 0.95);
+  padding: 20px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -20,6 +30,25 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}gba(0, 0, 0, 0.3);
 }
 
 /* LOGO 與標題 */
@@ -188,17 +217,26 @@ body {
     }
 
     .hero h1 {
-      font-size: 3.5rem;
-      color: #f4c430;
-      max-width: 90%;
-      text-align: center;
-    }
+  font-size: 3.5rem;
+  color: #f4c430;
+  max-width: 90%;
+  text-align: center;
+}
 
-    .hero p {
-      font-size: 1.5rem;
-      max-width: 80%;
-      text-align: center;
-    }
+.hero p {
+  font-size: 1.5rem;
+  max-width: 80%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
 
     .cta-button {
       background: #f4c430;
@@ -367,33 +405,4 @@ body {
       margin-top: 10px;
       font-size: 1.2rem;
     }
-  
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-  .logo-container h1 {
-    font-size: 1.5rem;
-  }
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .cta-button {
-    padding: 10px 15px;
-  }
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
