@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    .menu-toggle {
+    .menuToggle {
       display: none;
       font-size: 1.5rem;
       color: #f4c430;
@@ -185,7 +185,7 @@
 
 <body>
   <header id="navbar">
-    <button class="menu-toggle">☰</button>
+    <button class="menuToggle">☰</button>
     <div class="logo-container">
       <img src="https://media.discordapp.net/attachments/1275411810635218964/1334934464949784586/unnaSmed.png" alt="STARLUX VA">
       <h1>星宇虛擬航空 STARLUX VA</h1>
@@ -231,6 +231,19 @@
   </footer>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menuToggle');
+      const navbar = document.querySelector('.navbar');
+
+      menuToggle.addEventListener('click', function () {
+        if (navbar.style.display === 'none' || navbar.style.display === '') {
+          navbar.style.display = 'flex';
+        } else {
+          navbar.style.display = 'none';
+        }
+      });
+    });
+
     let lastScrollTop = 0;
     window.addEventListener("scroll", function() {
       let navbar = document.getElementById("navbar");
@@ -242,15 +255,33 @@
       }
       lastScrollTop = currentScroll;
     });
+        menuToggle.addEventListener('click', function () {
+        if (navbar.style.display === 'none' || navbar.style.display === '') {
+          navbar.style.display = 'flex';
+        } else {
+          navbar.style.display = 'none';
+        }
+      });
   </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
       const menuToggle = document.querySelector('.menu-toggle');
       const navbar = document.querySelector('.navbar');
+      
+      
+      
 
       menuToggle.addEventListener('click', function () {
-        navbar.classList.toggle('active');
+        if (navbar.style.display === 'none' || navbar.style.display === '') {
+          navbar.style.display = 'flex';
+        } else {
+          navbar.style.display = 'none';
+        }
       });
+      
+      
+
+      
     });
   </script>
 </body>
