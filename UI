@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式網站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>我的響應式網站</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>區塊 1</h2>
+            <p>這是一個可以自適應的 UI 區塊。</p>
+        </section>
+        <section class="card">
+            <h2>區塊 2</h2>
+            <p>這個網頁適用於桌機、平板與手機。</p>
+        </section>
+        <section class="card">
+            <h2>區塊 3</h2>
+            <p>試著縮放畫面看看效果！</p>
+        </section>
+    </main>
+
+    <button id="alertButton">點擊我</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
