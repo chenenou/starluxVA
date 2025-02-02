@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於星宇虛擬航空 About us</title>
+  <link rel="icon" type="image/png" href="/img/logo.png">
+  <meta name="description" content="星宇虛擬航空，帶您翱翔星空，享受極致奢華的飛行體驗。">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="logo-container">
+      <img src="\img\starluxva.png" alt="STARLUX VA">
+    </div>
+    <nav class="navbar">
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="#services">資源提供</a>
+      <a href="#destinations">各式資訊</a>
+      <a href="#membership">已認證飛行員</a>
+      <a href="https://discord.gg/ckUTDYV8Ec">加入我們</a>
+      <a href="https://newsky.app/home" class="login-button">飛行員登入</a>
+  </nav>
+  </header>
+
+  <section class="hero-a">
+    <h1>關於星宇虛擬航空</h1>
+    <p>星宇虛擬航空由一群對於航空有熱誠並且想改變虛擬航空現狀的青年組成。</p>
+    <h4>&#8595;請下滑以獲取更多資訊&#8595;</h4>
+  </section>
+
+  <section class="content">
+    <div class="content-text">
+      <h2>開辦星宇航空的契機:</h2>
+      <p>2023年，星宇虛擬航空創辦人Aming因想破除台灣虛擬航空界令人詬病的現狀，創辦了星宇虛擬航空。</p>
+      <p> 他和幾位志同道合的友人，一步一腳印創立了星宇虛擬航空。</p>
+      <p>隨著星宇虛擬航空（Starlux Virtual Airlines，於2023年正式啟航，Aming 和他的團隊開始了虛擬航空界的一場革命。他們不僅致力於提供最擬真的飛行體驗，甚至自行撰寫教材，讓每一位飛行員都能學習到如何真實的飛行。</p>
+      </p>
+    </div>
+    
+    <div class="content-text">
+      <h2>Our Staff</h2>
+        <div class="staff">
+          <h3>Aming Wang</h3>
+          <p style="font-size:medium; color: #b3acac;">行政部門</p>
+            <div class="staffimg">
+              <img src="/img/nick.png" alt="阿明頭像">
+            </div>
+          </div>
+    </div>
+        
+    <div class="flight-info">
+      <h2>VATSIM即時航班資訊</h2>
+      <iframe src="https://vatboard.estassinos.com/?icao=RCTP"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 星宇虛擬航空 STARLUX VA. All Rights Reserved.</p>
+    <p>免責聲明:本網站上的所有內容，包括資料、商標、標誌、圖像連結等，僅限於學術研究與探討之用，無任何商業或營利目的，並且與任何真實航空公司無關。</p>
+    <p>Made by Cheng-En, Ou</p>
+  </footer>
+
+  <script>
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      let navbar = document.getElementById("navbar");
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        navbar.style.top = "-100px";
+      } else {
+        navbar.style.top = "0";
+      }
+      lastScrollTop = currentScroll;
+    });
+  </script>
+</body>
+
+</html>
